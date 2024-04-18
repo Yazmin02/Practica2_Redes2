@@ -11,9 +11,10 @@ public class Cliente {
     private int nextSeqNum; // Próximo número de secuencia a enviar
     private int windowSize; // Tamaño de la ventana
     private List<byte[]> packets; // Lista de paquetes a enviar
+    private int timeout; // Tiempo de espera para recibir ACKs en milisegundos
 
     // Constructor de la clase Cliente
-    public Cliente(String ip, int port, int dataPort, int windowSize) throws UnknownHostException, SocketException {
+    public Cliente(String ip, int port, int dataPort, int windowSize, int timeout) throws UnknownHostException, SocketException {
         this.address = InetAddress.getByName(ip); // Se obtiene la dirección IP del servidor
         this.serverPort = port; // Se establece el puerto del servidor
         this.dataPort = dataPort; // Se establece el puerto de datos para la conexión
@@ -22,6 +23,7 @@ public class Cliente {
         this.nextSeqNum = 0; // Inicialmente, el próximo número de secuencia es 0
         this.packets = new ArrayList<>(); // Se inicializa la lista de paquetes a enviar
         this.socket = new DatagramSocket(dataPort); // Se crea el socket UDP
+        this.timeout = timeout; // Se establece el tiempo de espera para recibir ACKs
     }
 
     // Método para conectar con el servidor y enviar el archivo
@@ -85,7 +87,15 @@ public class Cliente {
             }
             receiveAcks(); // Se espera la confirmación (ACK) del servidor
         }
+
+        // Enviar mensaje "FIN" al servidor para indicar el final del archivo
+        String finMessage = "FIN";
+        byte[] finData = finMessage.getBytes();
+        DatagramPacket finPacket = new DatagramPacket(finData, finData.length, address, serverPort);
+        socket.send(finPacket);
+        System.out.println("Enviado mensaje 'FIN' al servidor para indicar el final del archivo.");
     }
+
 
     // Método para enviar un paquete al servidor
     private void sendPacket(int seqNum) throws IOException {
@@ -100,7 +110,7 @@ public class Cliente {
     private void receiveAcks() throws IOException {
         byte[] ackBuffer = new byte[1024]; // Buffer para almacenar los datos del ACK
         DatagramPacket ackPacket = new DatagramPacket(ackBuffer, ackBuffer.length); // Paquete para recibir el ACK
-        socket.setSoTimeout(10000); // Se establece un tiempo de espera para recibir ACKs
+        socket.setSoTimeout(timeout); // Se establece un tiempo de espera para recibir ACKs
 
         try {
             // Se espera a recibir los ACKs del servidor
@@ -123,7 +133,8 @@ public class Cliente {
         int port = 5555; // Puerto del servidor
         int dataPort = 5556; // Puerto de datos para la conexión
         int windowSize = 5; // Tamaño de la ventana
-        Cliente client = new Cliente(ip, port, dataPort, windowSize); // Se crea una instancia del cliente
+        int timeout = 50000; // Tiempo de espera para recibir ACKs en milisegundos
+        Cliente client = new Cliente(ip, port, dataPort, windowSize, timeout); // Se crea una instancia del cliente
         client.connectAndSendFile(); // Se conecta al servidor y envía el archivo
     }
 }
