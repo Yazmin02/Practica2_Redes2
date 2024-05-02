@@ -106,7 +106,7 @@ public class Cliente {
         System.out.println("Enviado paquete con número de secuencia: " + seqNum);
     }
 
-    // Método para recibir las confirmaciones (ACKs) del servidor
+    // Método para esperar ACKs y manejar retransmisiones si es necesario
     private void receiveAcks() throws IOException {
         byte[] ackBuffer = new byte[1024]; // Buffer para almacenar los datos del ACK
         DatagramPacket ackPacket = new DatagramPacket(ackBuffer, ackBuffer.length); // Paquete para recibir el ACK
@@ -119,11 +119,22 @@ public class Cliente {
                 int ackNum = Integer.parseInt(new String(ackPacket.getData()).trim()); // Se obtiene el número de secuencia del ACK
                 System.out.println("Recibida confirmación para el paquete: " + ackNum); // Se muestra en pantalla el número de secuencia del paquete confirmado
                 base = Math.max(base, ackNum + 1); // Se actualiza la base de la ventana
+                if (base == packets.size()) {
+                    break; // Si todos los paquetes han sido confirmados, salimos del bucle
+                }
             }
         } catch (SocketTimeoutException e) {
             // Si no se reciben ACKs dentro del tiempo de espera, se retrocede N
             System.out.println("No se recibieron confirmaciones dentro del tiempo de espera. Retrocediendo N...");
             nextSeqNum = base; // Se retrocede el número de secuencia
+            sendPacketsFromBase(); // Se reenvían los paquetes desde la base de la ventana
+        }
+    }
+
+    // Método para reenviar los paquetes desde la base de la ventana
+    private void sendPacketsFromBase() throws IOException {
+        for (int i = base; i < base + windowSize && i < packets.size(); i++) {
+            sendPacket(i); // Se reenvían los paquetes desde la base hasta el límite de la ventana
         }
     }
 
