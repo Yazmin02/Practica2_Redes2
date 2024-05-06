@@ -1,0 +1,97 @@
+¿Qué es el ICANN?
+La Corporación de Internet para la Asignación de Nombres y Números mejor
+conocida como ICANN por sus siglas en inglés (Internet Corporation for Assigned
+Names and Numbers), es la asociación internacional sin ánimo de lucro fundada
+en septiembre de 1998, encargada de reunir a personas de todo el mundo con el
+objetivo de preservar la estabilidad operacional y la seguridad de Internet.
+Es una organización sin fines de lucro responsable de coordinar y administrar el
+sistema de nombres de dominio (DNS) a nivel mundial, así como la asignación de
+direcciones IP únicas y otros recursos relacionados con la gestión de Internet. Fue
+establecida en 1998 y tiene la responsabilidad de garantizar que Internet siga
+siendo interoperable, estable y segura. ICANN también supervisa la gestión de los
+TLD (dominios de nivel superior) como .com, .org, .net, entre otros, y coordina la
+asignación de direcciones IP y la administración del sistema de servidores raíz de
+DNS. Su misión es garantizar que Internet sea un recurso global accesible para
+todos y que su gestión sea realizada de manera abierta e inclusiva.
+Si bien la ICANN no controla el contenido ni los accesos que existen en Internet, si
+es la responsable de asignar el espacio de las direcciones numéricas de protocolo
+de Internet (IP), y coordinar el sistema de nombres de dominio (DNS), algo que es
+de suma importancia para la evolución y la expansión del Internet, ya que para
+ponerte en contacto con cualquier persona o empresa de manera digital, es
+necesario localizarlos a través de determinado nombre o número IP único. De este
+modo se convierte en la entidad responsable de alojar las direcciones IP y
+gestionar los dominios tanto genéricos (gTLD) como territoriales (ccTLD), a través
+de asignaciones a organizaciones externas que se dividirán en dos niveles:
+Registry y Registradores; asimismo, se encarga de delegar la gestión técnica de
+los Servidores Raíz que ordenan el tráfico en Internet.
+hola¿Qué es la IANA?
+La IANA (Autoridad de Números Asignados por Internet) es una función administrada por ICANN que es responsable de asignar y mantener diversos parámetros de protocolos de Internet, como números de puerto, números de protocolo, tipos de medios, números de sistema autónomo y otros identificadores únicos. Estos parámetros son esenciales para el funcionamiento de Internet, ya que aseguran la interoperabilidad y la correcta comunicación entre los diversos dispositivos y sistemas conectados a la red.
+La entidad Internet Assigned Numbers Authority desempeña un papel esencial en la gestión de Internet, ya que es responsable de asignar nombres y sistemas de números únicos que se usan de acuerdo con los estándares técnicos –protocolo de red– de Internet y constituyen la base del direccionamiento de páginas web. Aunque Internet no es una red gestionada de forma centralizada, debido a determinadas circunstancias técnicas algunos componentes básicos deben coordinarse a escala mundial, actividad de la que ya se ocupaba la IANA con ARPANET, lo que la convierte en una de las instituciones más antiguas de Internet.
+Las funciones de la Internet Assigned Numbers Authority son cruciales para poder comunicarse sin dificultades en Internet. Pueden dividirse en tres ámbitos diferentes:
+•	Asignación de números: La IANA coordina la reserva global de números IP y de los conocidos como números de sistema autónomo que se asignan en bloques de direcciones a los cinco registros regionales de Internet (RIR). A su vez, RIR pone a disposición de los registros locales (LIR) y nacionales (NIR) bloques de direcciones más pequeños que se conceden a los proveedores de servicios de Internet.
+•	Nombres de dominio: La IANA opera y coordina la zona raíz del DNS, esto es, del sistema de nombres de dominio, cuyos niveles conforman los nombres de dominio completos (dominios de nivel superior, dominios de segundo nivel y subdominios
+•	Parámetros de protocolo: En cooperación con la Internet Engineering Task Force (IETF), organización que se ocupa del desarrollo técnico de Internet, la IANA gestiona los números y las designaciones para los protocolos de Internet. Los protocolos de red y sus parámetros definen el lenguaje que permite a los ordenadores comunicarse entre sí y con otros dispositivos.
+ 
+Registro Regional de Internet
+Un Registro Regional de Internet, en inglés Regional Internet Registry (RIR), es una organización que supervisa la asignación y el registro de recursos de números de Internet dentro de una región particular del mundo. Los recursos incluyen direcciones IP (tanto IPv4 como IPv6) y números de sistemas autónomos (para su uso en encaminamiento BGP).
+En su origen el registro global de direcciones IP era un listado de direcciones IP con detalles de la organización a la que se había asignado. Ante el crecimiento de esta lista surgió el IANA (Internet Assigned Numbers Authority) para regular la asignación de direcciones IP. Con la rápida expansión de Internet, IANA no podría satisfacer la demanda de direcciones, surgió la idea de administrar los recursos numéricos mediante organizaciones subsidiarias a nivel regional, estableciendo los Registros Regionales de Internet (RIR).
+1.	ARIN (American Registry for Internet Numbers): ARIN es el RIR responsable de América del Norte, parte de América Central y el Caribe. Su área de jurisdicción incluye los Estados Unidos, Canadá y varios territorios en el Caribe. ARIN se encarga de la asignación y administración de direcciones IP y sistemas autónomos (AS) en esta región.
+ARIN administra los bloques de direcciones IP asignados a América del Norte, América Central y partes del Caribe. Esto incluye bloques de direcciones IP que comienzan con los números 1, 2 y 3, entre otros.
+2.	RIPE NCC (Réseaux IP Européens Network Coordination Centre): RIPE NCC es el RIR encargado de Europa, Medio Oriente y partes de Asia Central. Cubre una amplia gama de países desde Portugal hasta China. RIPE NCC también es responsable de asignar y administrar direcciones IP y sistemas autónomos en su área de servicio.
+RIPE NCC se encarga de los bloques de direcciones IP asignados a Europa, Medio Oriente y partes de Asia Central. Esto incluye bloques de direcciones IP que comienzan con los números 4 y 5, entre otros.
+3.	APNIC (Asia-Pacific Network Information Centre): APNIC es el RIR que atiende a la región de Asia-Pacífico, incluyendo países como China, Japón, India, Australia y muchas naciones insulares del Pacífico. Se encarga de la asignación y administración de direcciones IP y sistemas autónomos en esta región.
+APNIC administra los bloques de direcciones IP asignados a la región de Asia-Pacífico. Esto incluye bloques de direcciones IP que comienzan con los números 6 y 7, entre otros.
+4.	LACNIC (Latin American and Caribbean Internet Addresses Registry): LACNIC es el RIR para América Latina y el Caribe, excluyendo los territorios servidos por ARIN. Cubre desde México hasta el extremo sur de América del Sur, así como varias islas del Caribe. LACNIC es responsable de la asignación y administración de direcciones IP y sistemas autónomos en esta área.
+LACNIC se encarga de los bloques de direcciones IP asignados a América Latina y el Caribe, excluyendo los territorios servidos por ARIN. Esto incluye bloques de direcciones IP que comienzan con los números 8 y 9, entre otros. 
+5.	AFRINIC (African Network Information Centre): AFRINIC es el RIR que atiende a la región de África. Se encarga de la asignación y administración de direcciones IP y sistemas autónomos en todo el continente africano.
+AFRINIC administra los bloques de direcciones IP asignados a África. Esto incluye bloques de direcciones IP que comienzan con el número 1, entre otros.
+ Registro Regional de Internet
+Un Registro Regional de Internet, en inglés Regional Internet Registry (RIR), es
+una organización que supervisa la asignación y el registro de recursos de números
+de Internet dentro de una región particular del mundo. Los recursos incluyen
+direcciones IP (tanto IPv4 como IPv6) y números de sistemas autónomos (para su
+uso en encaminamiento BGP).
+En su origen el registro global de direcciones IP era un listado de direcciones IP
+con detalles de la organización a la que se había asignado. Ante el crecimiento de
+esta lista surgió el IANA (Internet Assigned Numbers Authority) para regular la
+asignación de direcciones IP. Con la rápida expansión de Internet, IANA no podría
+satisfacer la demanda de direcciones, surgió la idea de administrar los recursos
+numéricos mediante organizaciones subsidiarias a nivel regional, estableciendo
+los Registros Regionales de Internet (RIR).
+1. ARIN (American Registry for Internet Numbers): ARIN es el RIR
+responsable de América del Norte, parte de América Central y el Caribe. Su
+área de jurisdicción incluye los Estados Unidos, Canadá y varios territorios
+en el Caribe. ARIN se encarga de la asignación y administración de
+direcciones IP y sistemas autónomos (AS) en esta región.
+ARIN administra los bloques de direcciones IP asignados a América del Norte,
+América Central y partes del Caribe. Esto incluye bloques de direcciones IP que
+comienzan con los números 1, 2 y 3, entre otros.
+2. RIPE NCC (Réseaux IP Européens Network Coordination Centre): RIPE
+NCC es el RIR encargado de Europa, Medio Oriente y partes de Asia
+Central. Cubre una amplia gama de países desde Portugal hasta China.
+RIPE NCC también es responsable de asignar y administrar direcciones IP
+y sistemas autónomos en su área de servicio.
+RIPE NCC se encarga de los bloques de direcciones IP asignados a Europa,
+Medio Oriente y partes de Asia Central. Esto incluye bloques de direcciones IP que
+comienzan con los números 4 y 5, entre otros.
+3. APNIC (Asia-Pacific Network Information Centre): APNIC es el RIR que
+atiende a la región de Asia-Pacífico, incluyendo países como China, Japón,
+India, Australia y muchas naciones insulares del Pacífico. Se encarga de la
+asignación y administración de direcciones IP y sistemas autónomos en
+esta región.
+APNIC administra los bloques de direcciones IP asignados a la región de AsiaPacífico. Esto incluye bloques de direcciones IP que comienzan con los números 6
+y 7, entre otros.
+4. LACNIC (Latin American and Caribbean Internet Addresses Registry):
+LACNIC es el RIR para América Latina y el Caribe, excluyendo los
+territorios servidos por ARIN. Cubre desde México hasta el extremo sur de
+América del Sur, así como varias islas del Caribe. LACNIC es responsable
+de la asignación y administración de direcciones IP y sistemas autónomos
+en esta área.
+LACNIC se encarga de los bloques de direcciones IP asignados a América Latina
+y el Caribe, excluyendo los territorios servidos por ARIN. Esto incluye bloques de
+direcciones IP que comienzan con los números 8 y 9, entre otros.
+5. AFRINIC (African Network Information Centre): AFRINIC es el RIR que
+atiende a la región de África. Se encarga de la asignación y administración
+de direcciones IP y sistemas autónomos en todo el continente africano.
+AFRINIC administra los bloques de direcciones IP asignados a África. Esto incluye
+bloques de direcciones IP que comienzan con el número 1, entre otros.
